@@ -61,7 +61,7 @@ export const tokens = (mode) => ({
                 900: "#151632",
             },
         }
-        : {
+        : {//lightMode
             grey: {
                 100: "#141414",
                 200: "#292929",

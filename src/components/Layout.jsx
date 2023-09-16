@@ -1,14 +1,16 @@
 import { Outlet } from "react-router-dom"
 
 import TopBar from './Navigation/TopBar'
-import Sidebar from "./Navigation/SideBar"
+import SideBar from "./Navigation/SideBar"
 
 const Layout = () => {
     return (
         <>
-            <TopBar />
-            <Sidebar />
-            <Outlet />
+            <SideBar />
+            <main className='content'>
+                <TopBar />
+                <Outlet />
+            </main>
         </>
     )
 }

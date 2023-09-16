@@ -3,7 +3,7 @@ import { DataGrid, GridToolbar } from "@mui/x-data-grid"
 
 import { tokens } from "../../theme"
 import { mockDataContacts } from '../../data/mockData'
-import Header from "../../components/Navigation/Header"
+import Header from "../../components/Header"
 
 const Contacts = () => {
     const theme = useTheme();

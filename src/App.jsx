@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Link } from 'react-router-dom'
 import { CssBaseline, ThemeProvider } from '@mui/material'
 
 import { ColorModeContext, useMode } from './theme'
@@ -30,26 +30,32 @@ const App = () => {
         <div className='app'>
 
           <Routes>
+
             <Route path='/' element={<Layout />}>
 
-              <Route index element={<Dashboard />} />
+              <Route path='demo-dashboard' > {/* for git hub pages */}
 
-              <Route path='team' element={<Team />} />
-              <Route path='contacts' element={<Contacts />} />
-              <Route path='invoices' element={<Invoices />} />
-              <Route path='calendar' element={<Calendar />} />
+                <Route index element={<Dashboard />} />
 
-              <Route path='form' element={<Form />} />
-              <Route path='faq' element={<FAQ />} />
+                <Route path='team' element={<Team />} />
+                <Route path='contacts' element={<Contacts />} />
+                <Route path='invoices' element={<Invoices />} />
+                <Route path='calendar' element={<Calendar />} />
 
-              <Route path='bar' element={<Bar />} />
-              <Route path='line' element={<Line />} />
-              <Route path='pie' element={<Pie />} />
-              <Route path='geo' element={<Geo />} />
+                <Route path='form' element={<Form />} />
+                <Route path='faq' element={<FAQ />} />
+
+                <Route path='bar' element={<Bar />} />
+                <Route path='line' element={<Line />} />
+                <Route path='pie' element={<Pie />} />
+                <Route path='geo' element={<Geo />} />
+
+              </Route>
 
               <Route path="*" Component={() => (
                 <div>
                   <h1>404 Page Not Found</h1>
+                  <Link to="/demo-dashboard">Go to Home</Link>
                 </div>
               )} />
 
